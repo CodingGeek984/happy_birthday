@@ -1,0 +1,1764 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0d0b18">
+<meta name="description" content="Интерактивная дорамная открытка ко дню рождения Ани: ночной Сеул, торт со свечами, салют, OST и сертификат лучшей дружбы.">
+<title>С днем рождения, Аня ✨ · Episode 01</title>
+<meta property="og:type" content="website">
+<meta property="og:title" content="С днем рождения, Аня ✨ · Episode 01">
+<meta property="og:description" content="Ночная сеулская сцена, торт со свечами, салют и дорамный OST.">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8E%AC%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&family=Manrope:wght@200;300;400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300&family=Noto+Sans+KR:wght@300;400&display=swap" rel="stylesheet">
+<style>
+/* ═══════════════ K-DRAMA DESIGN SYSTEM ═══════════════ */
+:root{
+  --night:#0d0b18;
+  --night-2:#131024;
+  --night-3:#1b1633;
+
+  --lav:#cbb7f2;
+  --lav-soft:#e3d7f8;
+  --lav-dim:rgba(203,183,242,.16);
+  --pearl:#f0e8dc;
+  --pearl-dim:rgba(240,232,220,.7);
+  --gold:#d9b87c;
+  --gold-soft:#ecd3a3;
+
+  --text:#e9e5f4;
+  --muted:#a49cbe;
+
+  --stroke:rgba(255,255,255,.12);
+  --stroke-2:rgba(255,255,255,.2);
+  --stroke-gold:rgba(217,184,124,.34);
+
+  --glass:rgba(255,255,255,.045);
+  --glass-2:rgba(255,255,255,.075);
+
+  --shadow:0 30px 70px -30px rgba(0,0,0,.92);
+  --shadow-soft:0 14px 34px -20px rgba(0,0,0,.9);
+  --radius:20px;
+  --maxw:1140px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;scrollbar-gutter:stable;overflow-x:hidden}
+body{
+  margin:0;min-height:100%;
+  color:var(--text);
+  background:
+    radial-gradient(1100px 640px at 14% -6%, #241a45 0%, transparent 60%),
+    radial-gradient(900px 600px at 88% 8%, #1b2347 0%, transparent 58%),
+    radial-gradient(1000px 760px at 50% 106%, #221a40 0%, transparent 62%),
+    linear-gradient(180deg,#0d0b18 0%,#100d1e 42%,#0d0b18 100%);
+  background-attachment:fixed;
+  font-family:'Manrope','Noto Sans KR',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;
+  font-size:clamp(15px,1vw + 13px,17px);
+  line-height:1.68;
+  overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%}
+h1,h2,h3{font-family:'Playfair Display',Georgia,'Times New Roman',serif;line-height:1.14;margin:0;font-weight:600}
+p{margin:0}
+button{font:inherit;color:inherit}
+::selection{background:rgba(203,183,242,.3);color:#fff}
+:focus-visible{outline:2px solid var(--lav);outline-offset:3px;border-radius:14px}
+
+/* ── Фоновые слои: bokeh + звёзды + лепестки ── */
+#sky{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:0}
+.bokeh{position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden}
+.bokeh i{
+  position:absolute;border-radius:50%;display:block;
+  background:radial-gradient(circle at 40% 40%, rgba(203,183,242,.24), rgba(203,183,242,.05) 60%, transparent 72%);
+  filter:blur(30px);opacity:.55;
+  animation:drift 30s ease-in-out infinite alternate;
+}
+.bokeh i:nth-child(1){width:34vw;height:34vw;left:-9vw;top:8vh;animation-duration:28s}
+.bokeh i:nth-child(2){width:26vw;height:26vw;right:-6vw;top:26vh;background:radial-gradient(circle at 50% 50%,rgba(236,211,163,.2),transparent 70%);animation-duration:36s}
+.bokeh i:nth-child(3){width:30vw;height:30vw;left:30vw;bottom:-10vw;background:radial-gradient(circle at 50% 50%,rgba(140,160,235,.2),transparent 70%);animation-duration:42s}
+.bokeh i:nth-child(4){width:18vw;height:18vw;left:58vw;top:12vh;background:radial-gradient(circle at 50% 50%,rgba(203,183,242,.16),transparent 70%);animation-duration:34s}
+@keyframes drift{
+  0%{transform:translate3d(0,0,0) scale(1)}
+  100%{transform:translate3d(3vw,-4vh,0) scale(1.18)}
+}
+.vignette{position:fixed;inset:0;pointer-events:none;z-index:0;background:radial-gradient(120% 80% at 50% 40%,transparent 55%,rgba(6,4,14,.55) 100%)}
+
+#fx{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:90}
+.wrap{width:min(100% - 2.4rem,var(--maxw));margin-inline:auto}
+section{position:relative;z-index:1}
+
+/* ── Стекло ── */
+.glass{
+  background:linear-gradient(160deg,var(--glass-2),var(--glass));
+  border:1px solid var(--stroke);
+  border-radius:var(--radius);
+  box-shadow:var(--shadow), inset 0 1px 0 rgba(255,255,255,.08);
+  -webkit-backdrop-filter:blur(16px) saturate(130%);
+  backdrop-filter:blur(16px) saturate(130%);
+}
+.hairline{height:1px;background:linear-gradient(90deg,transparent,var(--stroke-gold),transparent);border:0;margin:0}
+
+/* ── Кинематографические подписи (subtitle styling) ── */
+.kicker{
+  display:inline-flex;align-items:center;gap:.6rem;
+  font-size:.7rem;font-weight:500;letter-spacing:.34em;text-transform:uppercase;
+  color:var(--gold-soft);
+  padding:.4rem 1rem;border-radius:999px;
+  background:rgba(217,184,124,.07);border:1px solid var(--stroke-gold);
+}
+.kicker i{width:5px;height:5px;border-radius:50%;background:var(--gold);box-shadow:0 0 10px var(--gold);font-style:normal}
+.sub-title{
+  display:block;margin-top:.9rem;
+  font-family:'Cormorant Garamond',Georgia,serif;font-style:italic;
+  font-size:clamp(.94rem,1.5vw,1.06rem);color:var(--muted);letter-spacing:.02em;
+}
+.sub-title::before{content:"— ";color:var(--gold);font-style:normal}
+.sub-title::after{content:" —";color:var(--gold);font-style:normal}
+.section-title{font-size:clamp(1.8rem,3.4vw,2.8rem);margin:1.1rem 0 0;letter-spacing:-.01em}
+.section-sub{color:var(--muted);max-width:58ch;font-weight:300;margin-top:.9rem}
+
+/* ── Кнопки ── */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:.6rem;
+  padding:.9rem 1.6rem;border-radius:999px;cursor:pointer;
+  border:1px solid var(--stroke-2);
+  background:linear-gradient(150deg,rgba(203,183,242,.16),rgba(217,184,124,.1));
+  color:var(--text);font-weight:500;font-size:.95rem;letter-spacing:.01em;
+  box-shadow:0 12px 30px -18px rgba(0,0,0,.9), inset 0 1px 0 rgba(255,255,255,.1);
+  transition:transform .28s cubic-bezier(.2,.9,.3,1.3),box-shadow .28s,background .28s,border-color .28s;
+}
+.btn:hover{
+  transform:translateY(-2px);
+  background:linear-gradient(150deg,rgba(203,183,242,.26),rgba(217,184,124,.18));
+  border-color:var(--stroke-gold);
+  box-shadow:0 18px 40px -20px rgba(0,0,0,.95), 0 0 26px -10px rgba(203,183,242,.5);
+}
+.btn:active{transform:translateY(0) scale(.985)}
+.btn.ghost{background:rgba(255,255,255,.03);border-color:var(--stroke);box-shadow:none}
+
+/* ── Плеер в стиле кассеты ── */
+.player{
+  position:relative;display:inline-flex;align-items:center;gap:.95rem;
+  padding:.55rem 1.35rem .55rem .6rem;border-radius:999px;cursor:pointer;
+  border:1px solid var(--stroke);background:linear-gradient(150deg,rgba(255,255,255,.06),rgba(255,255,255,.02));
+  box-shadow:0 14px 34px -20px rgba(0,0,0,.9), inset 0 1px 0 rgba(255,255,255,.09);
+  -webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);
+  transition:transform .28s cubic-bezier(.2,.9,.3,1.3),border-color .28s,box-shadow .28s;
+}
+.player:hover{transform:translateY(-2px);border-color:var(--stroke-gold);box-shadow:0 18px 40px -20px rgba(0,0,0,.95), 0 0 26px -10px rgba(203,183,242,.45)}
+.player.is-on{border-color:rgba(217,184,124,.5);box-shadow:0 18px 44px -20px rgba(0,0,0,.95), 0 0 30px -8px rgba(217,184,124,.4)}
+.player-cassette{
+  position:relative;flex:none;width:44px;height:30px;border-radius:6px;
+  background:linear-gradient(160deg,#2b2440,#171226);
+  border:1px solid rgba(255,255,255,.16);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.14);
+  display:flex;align-items:center;justify-content:center;gap:7px;
+}
+.player-cassette::after{
+  content:"";position:absolute;left:5px;right:5px;top:50%;height:1px;
+  background:rgba(255,255,255,.12);
+}
+.player-cassette i{
+  position:relative;width:7px;height:7px;border-radius:50%;
+  background:radial-gradient(circle at 35% 35%,#f4efe6,#a49bbf);
+  box-shadow:0 0 0 1px rgba(0,0,0,.5);
+}
+.player.is-on .player-cassette i{animation:reel 1.9s linear infinite}
+.player.is-on .player-cassette i:last-of-type{animation-duration:1.9s}
+@keyframes reel{from{transform:rotate(0)}to{transform:rotate(360deg)}}
+.player-txt{display:grid;gap:1px;text-align:left}
+.player-txt b{font-weight:500;font-size:.94rem;letter-spacing:.01em}
+.player-txt small{font-size:.64rem;letter-spacing:.26em;text-transform:uppercase;color:var(--muted)}
+.player-eq{display:inline-flex;align-items:flex-end;gap:2px;height:15px;margin-left:.15rem}
+.player-eq i{width:2.5px;height:3px;border-radius:2px;background:var(--gold);opacity:.6}
+.player.is-on .player-eq i{animation:eq .95s ease-in-out infinite alternate}
+.player-eq i:nth-child(2){animation-delay:.16s}
+.player-eq i:nth-child(3){animation-delay:.32s}
+.player-eq i:nth-child(4){animation-delay:.48s}
+@keyframes eq{from{height:3px;opacity:.45}to{height:15px;opacity:1}}
+
+/* ── EPISODE-плашка ── */
+.ep-strip{
+  position:relative;z-index:3;align-self:stretch;width:100%;
+  border-block:1px solid var(--stroke);
+  background:linear-gradient(90deg,rgba(203,183,242,.09),rgba(217,184,124,.06) 50%,rgba(203,183,242,.09));
+  padding:.7rem 0;overflow:hidden;
+  -webkit-mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);
+  mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);
+}
+.marquee{display:flex;width:max-content;animation:scrollx 38s linear infinite}
+.marquee.rev{animation-direction:reverse;animation-duration:52s}
+.marquee span{
+  padding-inline:1.6rem;white-space:nowrap;
+  font-size:.76rem;font-weight:500;letter-spacing:.3em;text-transform:uppercase;
+  color:#cdc4e4;
+}
+.marquee span::after{content:"✦";margin-left:2.4rem;color:var(--gold);opacity:.7}
+.marquee:hover{animation-play-state:paused}
+@keyframes scrollx{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* ── HERO ── */
+.hero{
+  min-height:clamp(600px,96vh,940px);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  padding:clamp(3.5rem,10vh,6.5rem) 0 clamp(2rem,6vh,4rem);
+}
+/* margin-bottom даёт 18px между кнопкой музыки и лентой EPISODE */
+.hero-inner{position:relative;z-index:2;display:grid;gap:0;justify-items:start;max-width:900px;margin-bottom:18px}
+.hero h1{
+  font-size:clamp(2.6rem,8.6vw,5.8rem);
+  letter-spacing:-.025em;margin:1.2rem 0 0;font-weight:500;
+  background:linear-gradient(100deg,#ffffff 4%,#e6daf8 38%,#c3d0f2 70%,#ecd3a3 100%);
+  -webkit-background-clip:text;background-clip:text;
+  -webkit-text-fill-color:transparent;color:transparent;
+}
+.hero h1 .em{
+  -webkit-text-fill-color:#ecd3a3;color:#ecd3a3;
+  -webkit-background-clip:border-box;background-clip:border-box;
+  filter:drop-shadow(0 6px 18px rgba(236,211,163,.4));
+}
+.hero .lead{color:#cfc9e2;font-size:clamp(1rem,1.5vw,1.16rem);max-width:54ch;font-weight:300;margin-top:1.3rem}
+.hero .lead b{color:#fff;font-weight:500}
+/* Отступ 18px между бегущей лентой EPISODE и кнопкой включения музыки */
+.actions{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:18px;align-items:center}
+
+/* ── ТОРТ (Korean Bento style) ── */
+.cake-section{padding:clamp(3.5rem,9vh,6rem) 0 clamp(3rem,8vh,5rem);text-align:center}
+.cake-wrap{position:relative;display:grid;place-items:center;margin-top:1.4rem;padding:1rem 0}
+.cake-stage{position:relative;font-size:clamp(8px,2.6vw,14px);height:17em;display:flex;align-items:flex-end;justify-content:center}
+.cake{
+  position:relative;width:16em;height:11.5em;cursor:pointer;border-radius:2.4em;
+  transition:transform .45s cubic-bezier(.2,.9,.3,1.2);
+  filter:drop-shadow(0 30px 40px rgba(0,0,0,.6));
+}
+.cake:hover{transform:translateY(-5px)}
+.cake::after{
+  content:"";position:absolute;inset:-10% -8% auto;height:62%;border-radius:50%;
+  background:radial-gradient(circle,rgba(236,211,163,.22),transparent 68%);
+  opacity:0;transition:opacity .6s;pointer-events:none;
+}
+.cake.lit::after{opacity:1;animation:cakeGlow 2.8s ease-in-out infinite alternate}
+@keyframes cakeGlow{from{opacity:.4}to{opacity:1}}
+
+.candles{position:absolute;left:0;right:0;bottom:8.2em;display:flex;justify-content:center;gap:.4em;z-index:4}
+.candle{position:relative;width:.55em;height:3em}
+.candle .wax{
+  position:absolute;inset:0;border-radius:.1em;
+  background:linear-gradient(180deg,#f4ecff,#c3b2e4);
+  box-shadow:inset -.1em -.1em .24em rgba(0,0,0,.35), inset .06em .06em .2em rgba(255,255,255,.55);
+}
+.candle .wick{position:absolute;top:-.2em;left:50%;width:.06em;height:.26em;margin-left:-.03em;background:#3a3450;border-radius:.05em}
+.flame{
+  position:absolute;bottom:100%;left:50%;width:.36em;height:.74em;margin-left:-.18em;
+  border-radius:50% 50% 44% 44% / 64% 64% 36% 36%;
+  background:radial-gradient(circle at 50% 74%,#fffdf3 0 16%,#ffeab4 32%,#ecc98a 58%,rgba(217,184,124,.24) 76%,transparent 100%);
+  transform-origin:50% 100%;
+  animation:flicker .4s ease-in-out infinite alternate;
+  box-shadow:0 0 1.4em .3em rgba(236,211,163,.34), 0 0 3em .8em rgba(203,183,242,.2);
+  transition:opacity .3s ease,transform .3s ease;
+}
+@keyframes flicker{
+  0%{transform:scale(1,1) translateX(0) rotate(-2deg)}
+  50%{transform:scale(.9,1.14) translateX(.04em) rotate(3deg)}
+  100%{transform:scale(1.04,.94) translateX(-.03em) rotate(-3deg)}
+}
+.smoke{
+  position:absolute;bottom:100%;left:50%;width:.38em;height:.38em;border-radius:50%;
+  background:radial-gradient(circle,rgba(226,224,240,.8),rgba(200,200,225,0) 70%);
+  opacity:0;pointer-events:none;
+}
+.candle.out .flame{opacity:0;transform:translateY(.14em) scale(.2,.05)}
+.candle.out .smoke{animation:smoke 2.6s ease-out forwards;animation-delay:var(--d,0s)}
+@keyframes smoke{
+  0%{opacity:.85;transform:translate(-50%,0) scale(.25)}
+  40%{opacity:.55;transform:translate(-50%,-1.8em) scale(1.1)}
+  100%{opacity:0;transform:translate(-50%,-4.6em) scale(2.4)}
+}
+
+/* Bento-стиль: слои с мягкими квадратными углами и кремовой пеной */
+.tier{position:absolute;left:50%;transform:translateX(-50%);border-radius:.6em}
+.tier-3{width:9.6em;height:3.1em;bottom:0;background:linear-gradient(180deg,#3b3163,#271f45);box-shadow:inset 0 1px 0 rgba(255,255,255,.1)}
+.tier-2{width:7.4em;height:2.8em;bottom:2.8em;background:linear-gradient(180deg,#463a76,#2e2552);box-shadow:inset 0 1px 0 rgba(255,255,255,.1)}
+.tier-1{width:5.2em;height:2.6em;bottom:5.3em;background:linear-gradient(180deg,#54458a,#372c5e);box-shadow:inset 0 1px 0 rgba(255,255,255,.12)}
+.frosting{
+  position:absolute;left:50%;transform:translateX(-50%);height:.9em;border-radius:.5em .5em .2em .2em;
+  background:linear-gradient(180deg,#f6f0e6,#ddcfb4);
+  box-shadow:inset 0 -.2em .4em rgba(120,100,150,.35);
+}
+.frosting::after{
+  content:"";position:absolute;left:0;right:0;top:.55em;height:.9em;
+  background-image:radial-gradient(circle at 12px 0,#f6f0e6 12px,transparent 13px);
+  background-size:24px .9em;background-repeat:repeat-x;opacity:.95;
+  filter:drop-shadow(0 .1em .14em rgba(90,74,130,.4));
+}
+.f-1{width:5.2em;bottom:7.55em}
+.f-2{width:7.4em;bottom:5.15em}
+.f-3{width:9.6em;bottom:2.55em}
+.sprinkles{position:absolute;inset:0;opacity:.6;background-size:16px 16px;background-repeat:repeat}
+.tier-1 .sprinkles{background-image:radial-gradient(circle at 3px 3px,rgba(236,211,163,.9) 1.5px,transparent 1.7px),radial-gradient(circle at 10px 8px,rgba(255,255,255,.85) 1.5px,transparent 1.7px)}
+.tier-2 .sprinkles{background-image:radial-gradient(circle at 4px 4px,rgba(203,183,242,.9) 1.5px,transparent 1.7px),radial-gradient(circle at 11px 9px,rgba(236,211,163,.8) 1.5px,transparent 1.7px)}
+.tier-3 .sprinkles{background-image:radial-gradient(circle at 5px 5px,rgba(255,255,255,.8) 1.4px,transparent 1.6px),radial-gradient(circle at 12px 10px,rgba(203,183,242,.7) 1.4px,transparent 1.6px)}
+.plate{
+  position:absolute;left:50%;bottom:-.6em;transform:translateX(-50%);
+  width:14em;height:1.5em;border-radius:50%;
+  background:linear-gradient(180deg,#2a2440,#15121f);
+  box-shadow:0 20px 34px -16px rgba(0,0,0,.9), inset 0 .1em .3em rgba(255,255,255,.1);
+}
+.plate::after{content:"";position:absolute;inset:.16em 1.2em auto;height:.4em;border-radius:50%;background:radial-gradient(ellipse,rgba(203,183,242,.3),transparent 70%)}
+
+.wish-note{
+  position:absolute;left:50%;top:0;transform:translate(-50%,14px) scale(.94);
+  width:min(92vw,440px);padding:.85rem 1.3rem;
+  opacity:0;pointer-events:none;z-index:6;
+  text-align:center;font-weight:400;color:var(--text);font-size:.98rem;
+  transition:opacity .6s ease,transform .7s cubic-bezier(.2,.9,.3,1.4);
+}
+.wish-note.show{opacity:1;transform:translate(-50%,-6px) scale(1)}
+.wish-note .spark{color:var(--gold)}
+.cake-hint{color:var(--muted);font-size:.86rem;margin-top:1.5rem}
+
+/* ── СЕКЦИЯ ПОЗДРАВЛЕНИЯ ── */
+.greet{padding:clamp(2rem,6vh,4rem) 0 clamp(3rem,8vh,5rem)}
+.greet-card{padding:clamp(1.8rem,4vw,3.2rem);border-radius:24px;position:relative;overflow:hidden}
+.greet-card::before{
+  content:"";position:absolute;inset:0;pointer-events:none;
+  background:linear-gradient(120deg,rgba(203,183,242,.14),transparent 44%,rgba(217,184,124,.1));
+}
+.greet-card p{font-size:clamp(1rem,1.55vw,1.14rem);line-height:1.84;color:#ded9ec;font-weight:300;position:relative}
+.greet-card p + p{margin-top:1.15em}
+.greet-card .greet-lead{font-size:clamp(1.35rem,2.6vw,1.95rem);line-height:1.4;margin-bottom:1.1em}
+.greet-card .lead-word{font-family:'Playfair Display',serif;font-size:1em;color:#fff;font-weight:600}
+.greet-card .heart{color:#fff;text-shadow:0 0 18px rgba(255,255,255,.55)}
+
+/* ── КАРТОЧКИ ── */
+.wishes{padding:0 0 clamp(3rem,8vh,5rem)}
+.cards{display:grid;gap:1.1rem;margin-top:2rem;grid-template-columns:repeat(auto-fit,minmax(min(100%,238px),1fr))}
+.card{
+  position:relative;isolation:isolate;overflow:hidden;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.5rem;
+  width:100%;min-height:246px;padding:2.1rem 1.4rem 1.5rem;cursor:pointer;
+  text-align:center;color:var(--text);font:inherit;
+  border-radius:20px;border:1px solid var(--stroke);
+  background:linear-gradient(160deg,rgba(255,255,255,.06),rgba(255,255,255,.022));
+  -webkit-backdrop-filter:blur(16px) saturate(130%);backdrop-filter:blur(16px) saturate(130%);
+  box-shadow:var(--shadow-soft), inset 0 1px 0 rgba(255,255,255,.07);
+  transition:transform .4s cubic-bezier(.2,.85,.25,1.2),box-shadow .4s,border-color .4s,background .4s;
+}
+.card-glow{
+  position:absolute;inset:-1px;z-index:-2;pointer-events:none;opacity:0;border-radius:inherit;
+  background:radial-gradient(120% 100% at 50% 0%,rgba(203,183,242,.42),rgba(217,184,124,.22) 48%,transparent 74%);
+  filter:blur(15px);transition:opacity .45s ease;
+}
+.card::after{
+  content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;
+  background:radial-gradient(circle at 50% 0%,rgba(255,255,255,.1),transparent 62%);
+}
+.card-emoji{font-size:2.5rem;line-height:1;filter:drop-shadow(0 6px 16px rgba(0,0,0,.5));transition:transform .45s cubic-bezier(.2,.85,.25,1.4)}
+.card-title{font-family:'Playfair Display',serif;font-size:1.1rem;color:#fff;line-height:1.32;max-width:16ch}
+.card-sub{font-size:.88rem;color:var(--muted);line-height:1.5;max-width:22ch}
+.card-cta{
+  display:inline-flex;align-items:center;gap:.4rem;margin-top:.35rem;
+  font-size:.68rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--gold-soft);opacity:.7;transition:opacity .35s,transform .35s;
+}
+.card-cta i{font-style:normal;transition:transform .35s cubic-bezier(.2,.85,.25,1.4)}
+.card-num{
+  position:absolute;top:1rem;right:1.2rem;
+  font-size:.66rem;letter-spacing:.2em;font-weight:600;
+  font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+  color:var(--gold-soft);opacity:.62;
+}
+.cards .card:hover,.cards .card:focus-visible{
+  transform:translateY(-7px) scale(1.03);
+  border-color:var(--stroke-gold);
+  box-shadow:0 28px 56px -22px rgba(0,0,0,.95), 0 0 32px -8px rgba(203,183,242,.4), inset 0 1px 0 rgba(255,255,255,.14);
+}
+.cards .card:hover .card-glow,.cards .card:focus-visible .card-glow{opacity:1}
+.cards .card:hover .card-emoji,.cards .card:focus-visible .card-emoji{transform:scale(1.14) translateY(-2px)}
+.cards .card:hover .card-cta,.cards .card:focus-visible .card-cta{opacity:1}
+.cards .card:hover .card-cta i,.cards .card:focus-visible .card-cta i{transform:translateX(4px)}
+.cards .card:active{transform:translateY(-3px) scale(1.01)}
+.cards-hint{color:var(--muted);font-size:.84rem;margin-top:1.2rem;text-align:center}
+
+/* ── МОДАЛЬНОЕ ОКНО ── */
+.modal{position:fixed;inset:0;z-index:100;display:grid;place-items:center;padding:1.2rem}
+.modal[hidden]{display:none}
+.modal-overlay{
+  position:absolute;inset:0;cursor:pointer;background:rgba(8,6,16,.6);
+  -webkit-backdrop-filter:blur(16px) saturate(125%);backdrop-filter:blur(16px) saturate(125%);
+  opacity:0;transition:opacity .38s ease;
+}
+.modal-box{
+  position:relative;width:min(100%,540px);max-height:min(86vh,720px);overflow-y:auto;
+  padding:clamp(1.8rem,4vw,2.9rem);text-align:center;
+  border-radius:22px;border:1px solid var(--stroke);
+  background:linear-gradient(160deg,rgba(35,28,62,.94),rgba(19,16,36,.96));
+  -webkit-backdrop-filter:blur(22px) saturate(130%);backdrop-filter:blur(22px) saturate(130%);
+  box-shadow:0 44px 90px -30px rgba(0,0,0,.96), 0 0 60px -20px rgba(203,183,242,.4), inset 0 1px 0 rgba(255,255,255,.1);
+  opacity:0;transform:scale(.87) translateY(14px);
+  transition:opacity .34s ease,transform .44s cubic-bezier(.2,.9,.3,1.22);
+  scrollbar-width:thin;scrollbar-color:rgba(203,183,242,.45) transparent;
+}
+.modal-box::before{
+  content:"";position:absolute;inset:0;pointer-events:none;border-radius:inherit;
+  background:radial-gradient(120% 70% at 50% 0%,rgba(203,183,242,.16),transparent 60%);
+}
+.modal.is-open .modal-overlay{opacity:1}
+.modal.is-open .modal-box{opacity:1;transform:scale(1) translateY(0)}
+.modal-box.is-closing{opacity:0;transform:scale(.89) translateY(10px);transition:opacity .22s ease,transform .22s ease}
+.modal-emoji{font-size:3.3rem;line-height:1;filter:drop-shadow(0 8px 20px rgba(0,0,0,.5))}
+.modal-tag{
+  display:inline-block;margin:.9rem 0 0;
+  font-size:.64rem;letter-spacing:.28em;text-transform:uppercase;
+  color:var(--gold);font-weight:600;
+}
+.modal-title{font-size:clamp(1.4rem,3.4vw,1.95rem);color:#fff;margin:.6rem 0 1.1rem;line-height:1.26}
+.modal-text{font-size:clamp(1rem,1.6vw,1.1rem);line-height:1.8;color:#ddd8ec;font-weight:300;max-width:44ch;margin-inline:auto}
+.modal-close{
+  position:absolute;top:.9rem;right:.9rem;z-index:2;
+  width:42px;height:42px;border-radius:50%;cursor:pointer;display:grid;place-items:center;
+  font-size:1rem;line-height:1;color:var(--text);
+  border:1px solid var(--stroke);background:rgba(255,255,255,.06);
+  box-shadow:0 10px 24px -14px rgba(0,0,0,.9);
+  transition:transform .3s cubic-bezier(.2,.9,.3,1.5),background .3s,color .3s,border-color .3s;
+}
+.modal-close:hover,.modal-close:focus-visible{
+  transform:rotate(90deg) scale(1.08);background:rgba(255,255,255,.14);
+  color:#fff;border-color:var(--stroke-gold);
+}
+.modal-foot{margin-top:1.7rem}
+.modal-foot .btn{width:100%}
+
+/* ── ПОДАРОК / БИЛЕТ ── */
+.gift-section{padding:0 0 clamp(3rem,9vh,6rem);text-align:center}
+.gift-stage{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;margin-top:26px}
+.gift{
+  position:relative;flex:none;width:190px;height:190px;cursor:pointer;
+  transform-style:preserve-3d;perspective:900px;transition:transform .4s cubic-bezier(.2,.9,.3,1.2);
+}
+.gift:hover{transform:translateY(-4px)}
+.gift-body{
+  position:absolute;left:8%;right:8%;bottom:6%;height:56%;border-radius:14px;
+  background:linear-gradient(160deg,#3a3160,#211b3a);
+  border:1px solid var(--stroke);
+  box-shadow:0 28px 46px -24px rgba(0,0,0,.95), inset 0 2px 0 rgba(255,255,255,.14);
+}
+.gift-body::before,.gift-body::after{content:"";position:absolute;top:0;bottom:0;width:16px;background:linear-gradient(180deg,rgba(236,211,163,.85),rgba(217,184,124,.5))}
+.gift-body::before{left:calc(50% - 8px)}
+.gift-body::after{
+  left:0;right:0;top:auto;bottom:auto;width:auto;height:14px;
+  background:linear-gradient(90deg,rgba(236,211,163,.22),rgba(236,211,163,.5),rgba(236,211,163,.22));
+  transition:opacity .8s ease .2s;
+}
+.gift-lid{
+  position:absolute;left:2%;right:2%;top:12%;height:20%;border-radius:11px;z-index:3;
+  background:linear-gradient(160deg,#4a3f77,#2b2348);
+  border:1px solid var(--stroke);
+  box-shadow:0 14px 26px -16px rgba(0,0,0,.9), inset 0 2px 0 rgba(255,255,255,.18);
+  transition:transform .85s cubic-bezier(.3,1.3,.4,1),opacity .5s;
+  transform-origin:12% 50%;
+}
+.gift-lid::after{content:"";position:absolute;left:0;right:0;top:50%;height:12px;transform:translateY(-50%);background:linear-gradient(90deg,rgba(236,211,163,.26),rgba(236,211,163,.55),rgba(236,211,163,.26))}
+.bow{position:absolute;top:50%;width:32px;height:32px;border-radius:50% 50% 8% 50%;
+  background:linear-gradient(140deg,#ecd3a3,#c9a86a);
+  box-shadow:0 6px 12px -6px rgba(0,0,0,.8), inset 0 1px 0 rgba(255,255,255,.4);
+  transition:transform .85s cubic-bezier(.3,1.4,.4,1),opacity .5s}
+.bow-l{left:-13px;transform:rotate(-16deg)}
+.bow-r{left:calc(100% + 13px);transform:scaleX(-1) rotate(-16deg)}
+.bow-knot{position:absolute;left:50%;top:50%;width:20px;height:20px;margin:-10px 0 0 -10px;border-radius:50%;
+  background:radial-gradient(circle at 34% 30%,#fdf3dd,#c9a86a);
+  box-shadow:0 4px 10px -4px rgba(0,0,0,.8);
+  transition:transform .85s cubic-bezier(.3,1.4,.4,1)}
+.gift-shadow{position:absolute;left:14%;right:14%;bottom:0;height:16px;border-radius:50%;background:radial-gradient(ellipse,rgba(0,0,0,.6),transparent 70%);filter:blur(6px)}
+.gift:hover .gift-lid{transform:rotate(-4deg) translateY(-3px)}
+.gift.open{cursor:default}
+.gift.open .gift-lid{transform:translateY(-140px) rotate(-26deg) translateX(-24px);opacity:.85}
+.gift.open .bow-l{transform:translate(-16px,-86px) rotate(-40deg);opacity:0}
+.gift.open .bow-r{transform:scaleX(-1) translate(-16px,-86px) rotate(-40deg);opacity:0}
+.gift.open .bow-knot{transform:translate(-16px,-90px) scale(.6);opacity:0}
+.gift.open .gift-body::after{opacity:.35}
+
+/* Билет в стиле кинобилета.
+   .ticket-drop схлопывается в 0fr, поэтому в закрытом состоянии
+   билет НЕ занимает место — коробка стоит сразу под заголовком. */
+.ticket-drop{
+  display:grid;grid-template-rows:0fr;width:100%;
+  margin-top:0;opacity:0;visibility:hidden;pointer-events:none;
+  transition:grid-template-rows .7s cubic-bezier(.22,1,.3,1),opacity .45s ease,
+             margin-top .7s cubic-bezier(.22,1,.3,1),visibility .7s;
+}
+.ticket-drop.show{grid-template-rows:1fr;margin-top:26px;opacity:1;visibility:visible;pointer-events:auto}
+.ticket-clip{
+  overflow:hidden;min-height:0;
+  width:min(94vw,540px);margin-inline:auto;border-radius:16px;
+  background:linear-gradient(155deg,rgba(247,242,235,.98),rgba(228,218,236,.96));
+  box-shadow:0 34px 60px -24px rgba(0,0,0,.95), inset 0 1px 0 rgba(255,255,255,.7);
+}
+.ticket{
+  position:relative;width:100%;color:#1f1a30;
+  transform:translateY(28px) scale(.97);transform-origin:50% 0;
+  transition:transform .7s cubic-bezier(.2,1.2,.35,1.1);
+}
+.ticket-drop.show .ticket{transform:none}
+.ticket::before,.ticket::after{
+  content:"";position:absolute;right:0;width:26px;height:26px;border-radius:50%;
+  background:#0d0b18;border:1px solid var(--stroke);
+}
+.ticket::before{top:0;transform:translateY(-50%)}
+.ticket::after{bottom:0;transform:translateY(50%)}
+.ticket-in{padding:1.5rem 1.7rem 1.4rem}
+.ticket-head{display:flex;align-items:center;justify-content:space-between;gap:1rem;gap:2.4rem;padding-bottom:.9rem;border-bottom:2px dashed rgba(31,26,48,.22)}
+.ticket-kicker{font-size:.62rem;letter-spacing:.3em;text-transform:uppercase;color:#5c4c33;font-weight:700}
+.ticket-no{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.68rem;color:#5c4c33;letter-spacing:.1em;white-space:nowrap}
+.ticket-title{font-size:clamp(1.2rem,2.6vw,1.55rem);line-height:1.24;margin:.95rem 0 .75rem;color:#1f1a30}
+.ticket-text{font-size:.95rem;line-height:1.6;margin:0 0 .75rem;color:#39314f;font-weight:500}
+.ticket-list{margin:0 0 1rem;padding:0;list-style:none;counter-reset:tk;display:grid;gap:.55rem}
+.ticket-list li{
+  position:relative;counter-increment:tk;
+  padding:.6rem .8rem .6rem 2.35rem;border-radius:11px;
+  background:rgba(255,255,255,.6);box-shadow:inset 0 0 0 1px rgba(31,26,48,.1);
+  font-size:.89rem;line-height:1.55;color:#39314f;
+}
+.ticket-list li::before{
+  content:counter(tk);position:absolute;left:.68rem;top:.58rem;
+  width:1.22rem;height:1.22rem;border-radius:50%;display:grid;place-items:center;
+  font-size:.66rem;font-weight:800;color:#f7f2eb;background:linear-gradient(150deg,#4a3f77,#2b2348);
+}
+.ticket-list b{color:#1f1a30;font-weight:700}
+.ticket-terms{margin:0 0 1.1rem;display:grid;gap:.4rem;padding-top:.85rem;border-top:2px dashed rgba(31,26,48,.22)}
+.ticket-terms>div{display:flex;flex-wrap:wrap;gap:.2rem .55rem;font-size:.84rem;line-height:1.5}
+.ticket-terms dt{color:#5c4c33;font-weight:700}
+.ticket-terms dt::after{content:":"}
+.ticket-terms dd{margin:0;color:#39314f}
+.ticket-btn{
+  width:100%;color:#f7f2eb;border-color:rgba(31,26,48,.4);
+  background:linear-gradient(150deg,#4a3f77,#2b2348);
+  box-shadow:0 12px 26px -14px rgba(43,35,72,.95), inset 0 1px 0 rgba(255,255,255,.22);
+}
+.ticket-btn:hover{background:linear-gradient(150deg,#5a4d8c,#382e5c);border-color:rgba(217,184,124,.6)}
+.ticket-btn.activated{
+  background:linear-gradient(150deg,rgba(255,255,255,.96),rgba(240,236,250,.95));
+  color:#1f1a30;cursor:default;box-shadow:inset 0 0 0 1px rgba(31,26,48,.26);
+}
+.ticket-btn.activated:hover{transform:none}
+.ticket-stub{
+  display:flex;align-items:center;justify-content:center;gap:1rem;
+  padding:.7rem 1.7rem;border-top:2px dashed rgba(31,26,48,.22);
+  background:rgba(255,255,255,.5);border-radius:0 0 16px 16px;
+  font-size:.66rem;letter-spacing:.22em;text-transform:uppercase;color:#5c4c33;font-weight:700;
+}
+.ticket-perf{position:absolute;top:14%;bottom:14%;left:74%;width:1px;background:repeating-linear-gradient(180deg,rgba(31,26,48,.28) 0 6px,transparent 6px 12px)}
+.gift-hint{color:var(--muted);font-size:.86rem;margin-top:.4rem}
+
+/* ── ФУТЕР / REVEAL ── */
+footer{
+  position:relative;z-index:1;text-align:center;
+  padding:2.6rem 1rem 3rem;color:var(--muted);font-size:.84rem;
+  border-top:1px solid var(--stroke);
+  background:linear-gradient(180deg,transparent,rgba(0,0,0,.28));
+}
+footer .white-heart{color:#fff}
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.8,.3,1)}
+.reveal.in{opacity:1;transform:none}
+
+/* ═══════════════ ПЛАНШЕТЫ: до 768px ═══════════════ */
+@media (max-width:768px){
+  .wrap{width:min(100% - 1.9rem,var(--maxw))}
+
+  /* Заголовки и текст — плавно уменьшаются, ничего не выходит за края */
+  .kicker{font-size:.6rem;letter-spacing:.2em;padding:.32rem .72rem}
+  .sub-title{font-size:clamp(.86rem,2.9vw,1rem);line-height:1.6}
+  .section-title{font-size:clamp(1.5rem,6.1vw,2.15rem);margin-top:.85rem}
+  .hero{min-height:auto;padding:clamp(2.6rem,7vh,4rem) 0 clamp(1.5rem,4vh,2.4rem)}
+  .hero h1{font-size:clamp(2.05rem,8.4vw,3.5rem);line-height:1.1}
+  .hero .lead{font-size:clamp(.95rem,3.3vw,1.07rem);margin-top:1rem}
+  .greet-card p{font-size:clamp(.96rem,2.9vw,1.08rem);line-height:1.76}
+  .greet-card .greet-lead{font-size:clamp(1.2rem,4.6vw,1.6rem)}
+  .cards-hint,.cake-hint,.gift-hint{font-size:.8rem}
+
+  /* Лента EPISODE компактнее */
+  .ep-strip{padding:.55rem 0}
+  .marquee span{font-size:.68rem;letter-spacing:.24em;padding-inline:1.1rem}
+  .marquee span::after{margin-left:1.7rem}
+
+  /* Кнопки — крупные, удобные для пальца */
+  .actions{gap:.65rem;width:100%}
+  .btn{min-height:46px;padding:.78rem 1.2rem}
+  .player{flex:1 1 100%;min-height:56px;padding:.55rem 1.1rem .55rem .55rem}
+
+  /* Карточки: 90–95% ширины экрана */
+  .cards{grid-template-columns:repeat(auto-fit,minmax(min(100%,206px),1fr));gap:.85rem;margin-top:1.5rem}
+  .card{min-height:0;padding:1.55rem 1rem 1.2rem;touch-action:manipulation}
+  .card-emoji{font-size:2.25rem}
+  .card-num{top:.8rem;right:1rem}
+
+  /* Модальные окна: 90–95% ширины экрана */
+  .modal{padding:.9rem}
+  .modal-box{width:min(94vw,520px);max-height:88vh;padding:1.55rem 1.15rem 1.35rem;border-radius:20px}
+  .modal-title{font-size:clamp(1.25rem,5vw,1.65rem)}
+  .modal-text{font-size:clamp(.94rem,3.5vw,1.04rem);line-height:1.68}
+  .modal-close{width:44px;height:44px;top:.7rem;right:.7rem}
+
+  /* Торт и подарок — крупные зоны нажатия */
+  .cake-stage{font-size:clamp(7.5px,2.4vw,12px);height:18em}
+  .cake{width:17em;height:12.2em;cursor:pointer}
+  .wish-note{width:min(92vw,400px);font-size:.92rem;padding:.75rem 1rem}
+  .gift{width:172px;height:172px}
+
+  /* Билет */
+  .ticket-clip{width:min(94vw,470px)}
+  .gift-stage{margin-top:22px}
+  .ticket-drop.show{margin-top:22px}
+}
+
+@media (max-width:640px){
+  .wrap{width:min(100% - 1.6rem,var(--maxw))}
+  .kicker{font-size:.62rem;letter-spacing:.24em;padding:.34rem .8rem}
+  .card{min-height:222px;padding:1.9rem 1.15rem 1.35rem}
+  .card-emoji{font-size:2.2rem}
+  .card-title{font-size:1.02rem}
+  .card-sub{font-size:.84rem}
+  .modal{padding:.85rem}
+  .modal-box{max-height:88vh;padding:1.7rem 1.25rem 1.5rem;border-radius:18px}
+  .modal-emoji{font-size:2.7rem}
+  .modal-close{top:.65rem;right:.65rem;width:38px;height:38px}
+  .ticket-clip{width:min(94vw,440px)}
+  .ticket{transform:translateY(22px) scale(.98)}
+  .ticket-in{padding:1rem .95rem .95rem}
+  .ticket-head{gap:.5rem .8rem;flex-wrap:wrap;padding-bottom:.7rem}
+  .ticket-kicker{font-size:.55rem;letter-spacing:.16em}
+  .ticket-no{font-size:.6rem;letter-spacing:.06em}
+  .ticket-title{font-size:1.06rem;line-height:1.2;margin:.7rem 0 .5rem}
+  .ticket-text{font-size:.85rem;line-height:1.45;margin-bottom:.55rem}
+  .ticket-list{gap:.4rem;margin-bottom:.7rem}
+  .ticket-list li{font-size:.8rem;line-height:1.42;padding:.45rem .6rem .45rem 1.95rem;border-radius:9px}
+  .ticket-list li::before{left:.55rem;top:.45rem;width:1.05rem;height:1.05rem;font-size:.58rem}
+  .ticket-terms{gap:.25rem;padding-top:.6rem;margin-bottom:.8rem}
+  .ticket-terms>div{font-size:.72rem;line-height:1.4;gap:.1rem .4rem}
+  .ticket-btn{padding:.75rem 1rem}
+  .ticket-stub{padding:.5rem .9rem;font-size:.6rem;letter-spacing:.14em;gap:.6rem}
+  .gift-stage{margin-top:20px}
+  .player{padding:.5rem 1.1rem .5rem .5rem;gap:.7rem}
+  .player-cassette{width:38px;height:26px}
+}
+
+/* ═══════════════ СМАРТФОНЫ: до 480px ═══════════════ */
+@media (max-width:480px){
+  .wrap{width:min(100% - 1.5rem,var(--maxw))}
+  body{font-size:15px}
+
+  /* Типографика: ничто не выходит за края экрана */
+  .kicker{font-size:.55rem;letter-spacing:.16em;padding:.3rem .62rem}
+  .section-title{font-size:clamp(1.35rem,7vw,1.75rem);line-height:1.16}
+  .sub-title{font-size:.85rem;line-height:1.55}
+  .hero{padding:clamp(2.1rem,6vh,3rem) 0 clamp(1.2rem,3vh,1.8rem)}
+  .hero h1{font-size:clamp(1.85rem,8.6vw,2.6rem);line-height:1.08}
+  .hero .lead{font-size:.94rem;line-height:1.6;margin-top:.9rem}
+  .hero-inner{margin-bottom:16px}
+  .greet{padding:0 0 clamp(2.2rem,7vh,3.2rem)}
+  .greet-card{padding:1.5rem 1.15rem;border-radius:20px}
+  .greet-card p{font-size:.95rem;line-height:1.72}
+  .greet-card .greet-lead{font-size:1.18rem;line-height:1.36}
+  .ep-strip{padding:.48rem 0}
+  .marquee span{font-size:.62rem;letter-spacing:.2em;padding-inline:.9rem}
+  .marquee span::after{margin-left:1.3rem}
+
+  /* Кнопки во всю ширину, крупная зона нажатия */
+  .actions{flex-direction:column;align-items:stretch;gap:.6rem;margin-top:16px}
+  .player{flex:0 0 auto;width:100%;min-height:60px;padding:.6rem 1.1rem .6rem .6rem}
+  .player-txt b{font-size:.95rem}
+  .actions .btn{width:100%;min-height:48px;justify-content:center}
+  .btn{min-height:48px}
+
+  /* Карточки: 93% ширины экрана, одна колонка */
+  .cards{grid-template-columns:1fr;gap:.8rem;margin-top:1.35rem}
+  .card{min-height:0;padding:1.5rem 1rem 1.15rem;border-radius:18px}
+  .card-emoji{font-size:2.1rem}
+  .card-title{font-size:1.05rem;max-width:none}
+  .card-sub{font-size:.85rem;max-width:none}
+
+  /* Модалка: 93% ширины экрана */
+  .modal{padding:.7rem}
+  .modal-box{width:93vw;max-height:90vh;padding:1.5rem 1.05rem 1.25rem;border-radius:18px}
+  .modal-emoji{font-size:2.5rem}
+  .modal-title{font-size:1.2rem;margin:.5rem 0 .9rem}
+  .modal-text{font-size:.95rem;line-height:1.64}
+  .modal-close{width:44px;height:44px;top:.6rem;right:.6rem}
+  .modal-foot{margin-top:1.3rem}
+
+  /* Торт: крупная зона нажатия, свечи не съезжают */
+  .cake-stage{font-size:8.4px;height:19em}
+  .cake{width:16.5em;height:11.8em}
+  .wish-note{width:94vw;font-size:.9rem;padding:.7rem .9rem}
+  .cake-hint{font-size:.8rem;margin-top:1.1rem}
+
+  /* Подарок и билет */
+  .gift{width:158px;height:158px}
+  .gift-stage{margin-top:18px}
+  .ticket-drop.show{margin-top:18px}
+  .ticket-clip{width:93vw;border-radius:14px}
+  .ticket-in{padding:.9rem .85rem .85rem}
+  .ticket-title{font-size:1rem}
+  .ticket-text{font-size:.82rem}
+  .ticket-list li{font-size:.78rem;padding:.42rem .55rem .42rem 1.85rem}
+  .ticket-terms>div{font-size:.7rem}
+  .ticket-btn{min-height:48px;padding:.7rem .9rem}
+  .gift-hint{font-size:.8rem;margin-top:.3rem}
+
+  footer{font-size:.78rem;padding:2rem .9rem 2.4rem}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.15s!important}
+  .reveal{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+<canvas id="sky" aria-hidden="true"></canvas>
+<div class="bokeh" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+<div class="vignette" aria-hidden="true"></div>
+
+<header class="hero">
+  <div class="wrap hero-inner">
+    <span class="kicker reveal"><i></i>Special Day · Seoul Nights</span>
+    <h1 class="reveal">С днем рождения <span class="em">✨</span></h1>
+    <p class="lead reveal">Тёплая ночная сцена, тихий OST на музыкальной шкатулке и очень много света — <b>это всё сегодня для тебя</b>.</p>
+    <span class="sub-title reveal">Сегодня ночь выглядит именно так, как будто рядом случилось что-то хорошее</span>
+
+    <div class="actions reveal">
+      <button class="player" id="musicBtn" type="button" aria-pressed="false" aria-label="Включить песню">
+        <span class="player-cassette" aria-hidden="true"><i></i><i></i></span>
+        <span class="player-txt">
+          <b id="musicLabel">Включить песню 🎶</b>
+          <small>OST · Music Box</small>
+        </span>
+        <span class="player-eq" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+      </button>
+      <a class="btn ghost" href="#cake-section">🕯️ К торту</a>
+    </div>
+  </div>
+
+  <div class="ep-strip">
+    <div class="marquee" id="marquee1"></div>
+  </div>
+  <div class="ep-strip" style="border-top:0">
+    <div class="marquee rev" id="marquee2"></div>
+  </div>
+</header>
+
+<main>
+<!-- ── ТОРТ ── -->
+<section class="cake-section" id="cake-section">
+  <div class="wrap">
+    <span class="kicker reveal"><i></i>Сцена 02 · Ночной десерт</span>
+    <h2 class="section-title reveal">Загадай желание</h2>
+    <p class="sub-title reveal">Тихая сцена, тёплый свет и пять свечей, которые ждут твоего слова</p>
+
+    <div class="cake-wrap">
+      <div class="wish-note glass" id="wishNote" role="status">
+        <span class="spark">🌟</span> Пусть все задуманные желания обязательно исполнятся!
+      </div>
+
+      <div class="cake-stage">
+        <div class="cake lit" id="birthdayCake" role="button" tabindex="0" aria-label="Торт со свечами — нажми, чтобы задуть свечи">
+          <div class="candles" id="candles">
+            <div class="candle" style="--d:.05s"><i class="smoke"></i><i class="flame"></i><i class="wick"></i><i class="wax"></i></div>
+            <div class="candle" style="--d:.35s"><i class="smoke"></i><i class="flame"></i><i class="wick"></i><i class="wax"></i></div>
+            <div class="candle" style="--d:.65s"><i class="smoke"></i><i class="flame"></i><i class="wick"></i><i class="wax"></i></div>
+            <div class="candle" style="--d:.95s"><i class="smoke"></i><i class="flame"></i><i class="wick"></i><i class="wax"></i></div>
+            <div class="candle" style="--d:1.25s"><i class="smoke"></i><i class="flame"></i><i class="wick"></i><i class="wax"></i></div>
+          </div>
+
+          <div class="plate"></div>
+          <div class="tier tier-3"><div class="sprinkles"></div></div>
+          <div class="frosting f-3"></div>
+          <div class="tier tier-2"><div class="sprinkles"></div></div>
+          <div class="frosting f-2"></div>
+          <div class="tier tier-1"><div class="sprinkles"></div></div>
+          <div class="frosting f-1"></div>
+        </div>
+      </div>
+
+      <div class="actions" style="justify-content:center">
+        <button class="btn" id="blowBtn" type="button">Задуть свечи 🕯️</button>
+        <button class="btn ghost" id="fireBtn" type="button">Ещё салют 🎬</button>
+      </div>
+      <p class="cake-hint">Можно нажать прямо на торт или на свечи</p>
+    </div>
+  </div>
+</section>
+
+<!-- ── ГЛАВНОЕ ПОЗДРАВЛЕНИЕ ── -->
+<section class="greet">
+  <div class="wrap">
+    <span class="kicker reveal"><i></i>Сцена 03 · Диалог</span>
+    <h2 class="section-title reveal">Слова, которые хочется сохранить</h2>
+    <span class="sub-title reveal">Тёплая сцена, долгий разговор и много искреннего 🤍</span>
+
+    <div class="greet-card glass reveal" style="margin-top:1.6rem">
+      <p class="greet-lead"><span class="lead-word">Аня, с днём рождения!</span> <span class="heart">✨</span></p>
+
+      <p>Бывают люди, рядом с которыми просто комфортно, а бывают такие, как ты — люди-магниты, с которыми хочется общаться бесконечно, делиться всем на свете и находить миллион поводов, чтобы списаться или созвониться ещё хотя бы ненадолго. Ты невероятно классная, супер-интересная и безумно весёлая подруга. С твоим появлением в любом дне становится больше лёгкости, смеха и какого-то особенного душевного тепла.</p>
+
+      <p>Спасибо тебе за твою искренность, за твоё умение поддержать даже через экран, поднять настроение одной гифкой или голосовухой и подмечать детали, которые другие даже не заметят. Иметь такую подругу — это настоящий подарок, и я очень ценю каждую нашу беседу, каждый созвон и все те истории, которыми мы делимся.</p>
+
+      <p>Хочу пожелать тебе, чтобы твоя жизнь складывалась красиво, уютно и вдохновляюще — прям как в самых лучших, тёплых дорамах. Пусть в твоём личном сюжете будет место только самым захватывающим поворотам, искренним людям, глубоким чувствам и, конечно же, безупречным, счастливым финалам в абсолютно каждом начинании! <span class="heart">🎬🤍</span></p>
+
+      <p>Пусть перед тобой открываются любые двери, любые цели достигаются с лёгкостью и азартом, а жизнь преподносит как можно больше приятных сюрпризов, ярких путешествий и моментов, от которых захватывает дух.</p>
+
+      <p>Никогда не сомневайся в себе, продолжай сиять, кайфовать от всего, чем занимаешься, и оставайся такой же невероятной, настоящей и прекрасной. Пусть этот год станет для тебя по-настоящему особенным! С твоим днём! <span class="heart">🎉🤍</span></p>
+    </div>
+  </div>
+</section>
+
+<!-- ── КАРТОЧКИ ПОЖЕЛАНИЙ ── -->
+<section class="wishes" id="wishes">
+  <div class="wrap">
+    <span class="kicker reveal"><i></i>Сцена 04 · Шесть причин</span>
+    <h2 class="section-title reveal">Карточки пожеланий</h2>
+    <p class="sub-title reveal">Каждая карточка — отдельная маленькая сцена. Нажми, чтобы открыть.</p>
+
+    <div class="cards">
+      <button class="card reveal" type="button" aria-haspopup="dialog" aria-label="Открыть пожелание: Целеустремлённость"
+              data-emoji="🎯" data-title="Целеустремлённость"
+              data-text="Твое невероятное умение уверенно идти к своим целям, преодолевать любые препятствия и добиваться крутых результатов. Ты всегда вдохновляешь своим движением вперёд! 🤍">
+        <span class="card-glow" aria-hidden="true"></span>
+        <span class="card-num">01</span>
+        <span class="card-emoji">🎯</span>
+        <span class="card-title">Целеустремлённость</span>
+        <span class="card-sub">Идти к своим целям...</span>
+        <span class="card-cta">Подробнее <i aria-hidden="true">→</i></span>
+      </button>
+
+      <button class="card reveal" type="button" aria-haspopup="dialog" aria-label="Открыть пожелание: Вдохновение и энергия"
+              data-emoji="✨" data-title="Вдохновение &amp; Энергия"
+              data-text="Неиссякаемый поток идей и драйв, который заряжает всех вокруг позитивом и превращает любой день в событие! ✨">
+        <span class="card-glow" aria-hidden="true"></span>
+        <span class="card-num">02</span>
+        <span class="card-emoji">✨</span>
+        <span class="card-title">Вдохновение &amp; Энергия</span>
+        <span class="card-sub">Заряд позитива...</span>
+        <span class="card-cta">Подробнее <i aria-hidden="true">→</i></span>
+      </button>
+
+      <button class="card reveal" type="button" aria-haspopup="dialog" aria-label="Открыть пожелание: Искренность и душевность"
+              data-emoji="🤍" data-title="Искренность &amp; Душевность"
+              data-text="Твоё редкое умение выслушать, поддержать даже сквозь километры и создать невероятно уютную атмосферу в общении. 🤍">
+        <span class="card-glow" aria-hidden="true"></span>
+        <span class="card-num">03</span>
+        <span class="card-emoji">🤍</span>
+        <span class="card-title">Искренность &amp; Душевность</span>
+        <span class="card-sub">Уют и тепло...</span>
+        <span class="card-cta">Подробнее <i aria-hidden="true">→</i></span>
+      </button>
+
+      <button class="card reveal" type="button" aria-haspopup="dialog" aria-label="Открыть пожелание: Острый ум и чувство юмора"
+              data-emoji="🧠" data-title="Острый ум &amp; Чувство юмора"
+              data-text="Способность разрядить абсолютно любую обстановку, подметить интереснейшие детали и посмеяться от всей души! С тобой никогда не бывает скучно. 🌟">
+        <span class="card-glow" aria-hidden="true"></span>
+        <span class="card-num">04</span>
+        <span class="card-emoji">🧠</span>
+        <span class="card-title">Острый ум &amp; Чувство юмора</span>
+        <span class="card-sub">Лучший юмор...</span>
+        <span class="card-cta">Подробнее <i aria-hidden="true">→</i></span>
+      </button>
+
+      <button class="card reveal" type="button" aria-haspopup="dialog" aria-label="Открыть пожелание: Уникальный стиль"
+              data-emoji="🌟" data-title="Уникальный стиль"
+              data-text="Твой утонченный вкус, взгляд на вещи и редкая суперспособность всегда оставаться собой в любой ситуации! 🤍">
+        <span class="card-glow" aria-hidden="true"></span>
+        <span class="card-num">05</span>
+        <span class="card-emoji">🌟</span>
+        <span class="card-title">Уникальный стиль</span>
+        <span class="card-sub">Твой индивидуальный взгляд...</span>
+        <span class="card-cta">Подробнее <i aria-hidden="true">→</i></span>
+      </button>
+
+      <button class="card reveal" type="button" aria-haspopup="dialog" aria-label="Открыть пожелание: Новые горизонты"
+              data-emoji="🚀" data-title="Новые горизонты"
+              data-text="Пусть перед тобой открываются самые интересные дороги, возможности, проекты и яркие путешествия. Живи яркую жизнь с крутым дорамным хэппи-эндом! 🎬✨">
+        <span class="card-glow" aria-hidden="true"></span>
+        <span class="card-num">06</span>
+        <span class="card-emoji">🚀</span>
+        <span class="card-title">Новые горизонты</span>
+        <span class="card-sub">Захватывающий сюжет...</span>
+        <span class="card-cta">Подробнее <i aria-hidden="true">→</i></span>
+      </button>
+    </div>
+    <p class="cards-hint reveal">Пожелание откроется в отдельном окне ✨</p>
+  </div>
+</section>
+
+<!-- ── ПОДАРОК ── -->
+<section class="gift-section" id="gift-section">
+  <div class="wrap">
+    <span class="kicker reveal"><i></i>Финальная сцена · Сюрприз</span>
+    <h2 class="section-title reveal">Твой билет</h2>
+    <span class="sub-title reveal">Коробочка уже ждёт. Внутри — кое-что очень личное 🎁</span>
+
+    <div class="gift-stage reveal">
+      <div class="gift" id="giftBox" role="button" tabindex="0" aria-label="Открыть подарок">
+        <div class="gift-shadow"></div>
+        <div class="gift-body"></div>
+        <div class="gift-lid">
+          <i class="bow bow-l"></i><i class="bow bow-r"></i><i class="bow bow-knot"></i>
+        </div>
+      </div>
+
+      <div class="ticket-drop" id="couponDrop">
+      <div class="ticket-clip">
+      <div class="ticket" id="coupon" role="region" aria-label="Сертификат Лучшей Дружбы">
+        <div class="ticket-in">
+          <div class="ticket-head">
+            <span class="ticket-kicker">Admit One · Best Friendship</span>
+            <span class="ticket-no">№ ANYA-2026-∞</span>
+          </div>
+          <h3 class="ticket-title">Сертификат Лучшей Дружбы 🎁🤍</h3>
+          <p class="ticket-text">Этот купон гарантирует Ане пожизненный доступ к:</p>
+
+          <ol class="ticket-list">
+            <li><b>Приоритетной линии связи 24/7</b> — быстрый ответ на любые сообщения, кружочки и голосовухи любого хронометража.</li>
+            <li><b>Бесконечным душевным беседам</b> — в любое время дня и ночи, обо всём на свете, с обсуждением дорам, жизни и любых безумных идей.</li>
+            <li><b>Безграничному запасу поддержки</b> — отправке смешных мемов, тёплых слов и готовности всегда выслушать и быть на твоей стороне.</li>
+          </ol>
+
+          <dl class="ticket-terms">
+            <div><dt>Срок действия</dt><dd>Бессрочно</dd></div>
+            <div><dt>Зона действия</dt><dd>Вся сеть Wi-Fi и мобильный интернет</dd></div>
+            <div><dt>Активация</dt><dd>Простым сообщением или стикером в ЛС! 🤍✨</dd></div>
+          </dl>
+
+          <button class="btn ticket-btn" id="couponBtn" type="button">Активировать купон 🤍</button>
+        </div>
+        <div class="ticket-stub"><span>🎬</span><span>Episode 01 · Special Day of Anya</span><span>✦</span></div>
+      </div>
+      </div>
+      </div>
+    </div>
+    <p class="gift-hint" id="giftHint">Нажми на коробку, чтобы открыть</p>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div>Episode 01 · Created with <span class="white-heart">🤍</span> for Anya</div>
+  <div style="margin-top:.4rem;font-size:.7rem;letter-spacing:.26em;text-transform:uppercase;opacity:.7">To be continued · Special Day of Anya ✨</div>
+</footer>
+
+<!-- ── МОДАЛЬНОЕ ОКНО ── -->
+<div class="modal" id="wishModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" hidden>
+  <div class="modal-overlay"></div>
+  <div class="modal-box">
+    <button class="modal-close" type="button" aria-label="Закрыть окно"><span aria-hidden="true">✕</span></button>
+    <div class="modal-emoji" aria-hidden="true">🎯</div>
+    <div class="modal-tag"></div>
+    <h3 class="modal-title" id="modalTitle"></h3>
+    <p class="modal-text"></p>
+    <div class="modal-foot">
+      <button class="btn modal-btn" type="button">Закрыть 🤍</button>
+    </div>
+  </div>
+</div>
+
+<canvas id="fx" aria-hidden="true"></canvas>
+
+<script>
+(() => {
+  "use strict";
+  const $ = (sel, ctx = document) => ctx.querySelector(sel);
+  const $$ = (sel, ctx = document) => Array.from(ctx.querySelectorAll(sel));
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const rnd = (a, b) => a + Math.random() * (b - a);
+
+  /* ═══════════ ФОН: ЗВЁЗДЫ + ЛЕПЕСТКИ + BOKEH ═══════════ */
+  const Sky = (() => {
+    const cv = $("#sky");
+    const ctx = cv.getContext("2d");
+    let W = 0, H = 0, dpr = 1, raf = null;
+    let stars = [], petals = [];
+
+    const resize = () => {
+      dpr = Math.min(window.devicePixelRatio || 1, 2);
+      W = window.innerWidth; H = window.innerHeight;
+      cv.width = Math.round(W * dpr);
+      cv.height = Math.round(H * dpr);
+      cv.style.width = W + "px";
+      cv.style.height = H + "px";
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      seed();
+    };
+
+    const seed = () => {
+      const count = Math.round((W * H) / 11000);
+      stars = Array.from({ length: count }, () => ({
+        x: rnd(0, W), y: rnd(0, H),
+        r: rnd(0.4, 1.5),
+        base: rnd(0.18, 0.7),
+        ph: rnd(0, Math.PI * 2),
+        sp: rnd(0.012, 0.05)
+      }));
+      const pc = Math.min(46, Math.round(W / 26));
+      petals = Array.from({ length: pc }, () => ({
+        x: rnd(0, W), y: rnd(-H, H),
+        vy: rnd(0.16, 0.5),
+        vx: rnd(-0.16, 0.16),
+        r: rnd(2.4, 5.4),
+        rot: rnd(0, Math.PI * 2),
+        vr: rnd(-0.012, 0.012),
+        sway: rnd(0, Math.PI * 2),
+        swaySpeed: rnd(0.006, 0.022),
+        a: rnd(0.14, 0.42),
+        kind: Math.random() < 0.55 ? "petal" : "snow"
+      }));
+    };
+
+    const draw = (t) => {
+      ctx.clearRect(0, 0, W, H);
+
+      // мерцающие звёзды
+      for (const s of stars) {
+        const tw = s.base * (0.62 + 0.38 * Math.sin(t * s.sp + s.ph));
+        ctx.globalAlpha = Math.max(0, tw);
+        ctx.fillStyle = "#ffffff";
+        ctx.beginPath();
+        ctx.arc(s.x, s.y, s.r, 0, Math.PI * 2);
+        ctx.fill();
+        if (s.r > 1.1) {
+          ctx.globalAlpha = Math.max(0, tw * 0.16);
+          ctx.beginPath();
+          ctx.arc(s.x, s.y, s.r * 4.5, 0, Math.PI * 2);
+          ctx.fill();
+        }
+      }
+
+      // падающие лепестки и снежинки
+      for (const p of petals) {
+        p.sway += p.swaySpeed;
+        p.y += p.vy;
+        p.x += p.vx + Math.sin(p.sway) * 0.28;
+        p.rot += p.vr;
+
+        if (p.y - p.r > H) { p.y = -p.r * 2; p.x = rnd(0, W); }
+        if (p.x < -20) p.x = W + 20;
+        if (p.x > W + 20) p.x = -20;
+
+        ctx.save();
+        ctx.translate(p.x, p.y);
+        ctx.rotate(p.rot);
+        ctx.globalAlpha = p.a;
+        ctx.fillStyle = p.kind === "petal" ? "#cbb7f2" : "#f0e8dc";
+        if (p.kind === "petal") {
+          ctx.beginPath();
+          ctx.ellipse(0, 0, p.r, p.r * 0.58, 0, 0, Math.PI * 2);
+          ctx.fill();
+        } else {
+          ctx.beginPath();
+          ctx.arc(0, 0, p.r * 0.5, 0, Math.PI * 2);
+          ctx.fill();
+        }
+        ctx.restore();
+      }
+      ctx.globalAlpha = 1;
+      raf = requestAnimationFrame(draw);
+    };
+
+    window.addEventListener("resize", resize);
+    document.addEventListener("visibilitychange", () => {
+      if (document.hidden) { if (raf) cancelAnimationFrame(raf); raf = null; }
+      else if (!raf && !reduceMotion) raf = requestAnimationFrame(draw);
+    });
+
+    resize();
+    if (reduceMotion) {
+      // статичный кадр
+      ctx.clearRect(0, 0, W, H);
+      for (const s of stars) {
+        ctx.globalAlpha = s.base; ctx.fillStyle = "#fff";
+        ctx.beginPath(); ctx.arc(s.x, s.y, s.r, 0, Math.PI * 2); ctx.fill();
+      }
+    } else {
+      raf = requestAnimationFrame(draw);
+    }
+  })();
+
+  /* ═══════════ CONFETTI / САЛЮТ ═══════════ */
+  const Confetti = (() => {
+    const cv = $("#fx");
+    const ctx = cv.getContext("2d");
+    let W = 0, H = 0, dpr = 1, raf = null, parts = [];
+
+    // Пастельно-золотая, серебристая, фиолетовая и белая палитра
+    const COLORS = [
+      "#ffffff", "#fdfdfd",                 // белый
+      "#f7f9fc", "#e4e9f2", "#c8d0dd", "#aab4c6",  // серебро
+      "#f4eef8", "#e6dbf7", "#d8c4f2", "#cbb7f2", "#b39ce8",  // фиолетовый
+      "#ecd3a3", "#e0c08a", "#d9b87c", "#f7ecd6"  // пастельное золото
+    ];
+    const SPARKS = ["#ffffff", "#f7f9fc", "#dfe4ee", "#ecd3a3", "#e0c08a", "#cbb7f2", "#e6dbf7"];
+
+    const resize = () => {
+      dpr = Math.min(window.devicePixelRatio || 1, 2);
+      W = window.innerWidth; H = window.innerHeight;
+      cv.width = Math.round(W * dpr);
+      cv.height = Math.round(H * dpr);
+      cv.style.width = W + "px";
+      cv.style.height = H + "px";
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    };
+    window.addEventListener("resize", resize);
+    resize();
+
+    const spark = (x, y, big) => {
+      const n = big ? 54 : 26;
+      for (let i = 0; i < n; i++) {
+        const a = (i / n) * Math.PI * 2 + rnd(-0.1, 0.1);
+        const sp = rnd(2, big ? 7.2 : 3.8);
+        parts.push({
+          kind: "spark",
+          x, y,
+          vx: Math.cos(a) * sp,
+          vy: Math.sin(a) * sp,
+          g: 0.017, drag: 0.978,
+          size: rnd(1, big ? 2.9 : 1.8),
+          color: SPARKS[(Math.random() * SPARKS.length) | 0],
+          life: 42, max: 42
+        });
+      }
+    };
+
+    const confettiBurst = (x, y, n, scale) => {
+      const s = scale || 1;
+      for (let i = 0; i < n; i++) {
+        const a = rnd(-Math.PI, 0);
+        const sp = rnd(3, 13) * s;
+        parts.push({
+          kind: "confetti",
+          x, y,
+          vx: Math.cos(a) * sp,
+          vy: Math.sin(a) * sp,
+          g: 0.016, drag: 0.99,
+          w: rnd(5, 12) * s, h: rnd(6, 15) * s,
+          color: COLORS[(Math.random() * COLORS.length) | 0],
+          rot: rnd(0, Math.PI * 2),
+          vr: rnd(-0.34, 0.34),
+          spin: rnd(0.1, 0.26) * (Math.random() < 0.5 ? -1 : 1),
+          sway: rnd(0, Math.PI * 2),
+          swaySpeed: rnd(0.05, 0.16),
+          life: 130, max: 130
+        });
+      }
+    };
+
+    /* Угловая пушка: точка вылета + сектор направлений */
+    const fireCannon = (o) => {
+      const count = o.count, a0 = o.ang[0], a1 = o.ang[1];
+      const s0 = o.speed[0], s1 = o.speed[1];
+      for (let i = 0; i < count; i++) {
+        const a = rnd(a0, a1);
+        const sp = rnd(s0, s1) * (o.boost ? 1.12 : 1);
+        parts.push({
+          kind: "confetti",
+          x: o.x, y: o.y,
+          vx: Math.cos(a) * sp,
+          vy: Math.sin(a) * sp,
+          g: 0.02, drag: 0.994,
+          w: rnd(6, 13), h: rnd(7, 17),
+          color: COLORS[(Math.random() * COLORS.length) | 0],
+          rot: rnd(0, Math.PI * 2),
+          vr: rnd(-0.38, 0.38),
+          spin: rnd(0.12, 0.3) * (Math.random() < 0.5 ? -1 : 1),
+          sway: rnd(0, Math.PI * 2),
+          swaySpeed: rnd(0.05, 0.16),
+          life: 170, max: 170
+        });
+      }
+    };
+
+    const CANNONS = {
+      /* двойной залп: left: 0.2 и right: 0.8 — по 62 части, итого ~124 */
+      wide: () => [
+        { x: W * 0.2, y: H * 0.98, ang: [-Math.PI * 0.47, -Math.PI * 0.1], count: 62, speed: [13, 24] },
+        { x: W * 0.8, y: H * 0.98, ang: [-Math.PI * 0.9, -Math.PI * 0.53], count: 62, speed: [13, 24] }
+      ],
+      /* усиленные пушки из нижних углов экрана */
+      corner: () => [
+        { x: -24, y: H * 0.95, ang: [-Math.PI * 0.49, -Math.PI * 0.15], count: 34, speed: [12, 21] },
+        { x: W + 24, y: H * 0.95, ang: [-Math.PI * 0.85, -Math.PI * 0.51], count: 34, speed: [12, 21] }
+      ]
+    };
+
+    const volley = (kind) => { CANNONS[kind]().forEach(fireCannon); };
+
+    const rain = (amount) => {
+      for (let i = 0; i < amount; i++) {
+        parts.push({
+          kind: "rain",
+          x: rnd(0, W), y: rnd(-H * 0.4, -10),
+          vx: rnd(-0.6, 0.6), vy: rnd(0.9, 2.6),
+          g: 0.004, drag: 1,
+          w: rnd(5, 11), h: rnd(6, 13),
+          color: COLORS[(Math.random() * COLORS.length) | 0],
+          rot: rnd(0, Math.PI * 2),
+          vr: rnd(-0.1, 0.1), spin: 0,
+          sway: rnd(0, Math.PI * 2),
+          swaySpeed: rnd(0.03, 0.08),
+          life: 300, max: 300
+        });
+      }
+    };
+
+    const draw = () => {
+      ctx.clearRect(0, 0, W, H);
+      for (const p of parts) {
+        p.life--;
+        if (p.life <= 0 || p.y > H + 60) continue;
+
+        if (p.kind === "spark") {
+          p.vx *= p.drag; p.vy = p.vy * p.drag + p.g;
+          p.x += p.vx; p.y += p.vy;
+          ctx.globalAlpha = Math.max(0, Math.min(1, p.life / 30));
+          ctx.globalCompositeOperation = "lighter";
+          ctx.strokeStyle = p.color;
+          ctx.lineWidth = p.size; ctx.lineCap = "round";
+          ctx.beginPath();
+          ctx.moveTo(p.x - p.vx * 2.6, p.y - p.vy * 2.6);
+          ctx.lineTo(p.x, p.y);
+          ctx.stroke();
+          ctx.globalCompositeOperation = "source-over";
+        } else {
+          p.sway += p.swaySpeed;
+          p.vx = p.vx * p.drag + Math.sin(p.sway) * 0.3;
+          p.vy = p.vy * p.drag + p.g;
+          p.x += p.vx; p.y += p.vy;
+          p.rot += p.vr;
+          p.spin = (p.spin || 0) * 0.99;
+          if (p.kind === "confetti" && p.spin) p.vx += p.spin * 0.5;
+          ctx.globalAlpha = Math.max(0, Math.min(1, p.life / 40));
+          const squash = Math.abs(Math.cos(p.rot * 1.6));
+          ctx.save();
+          ctx.translate(p.x, p.y);
+          ctx.rotate(p.rot);
+          ctx.fillStyle = p.color;
+          ctx.fillRect(-p.w / 2, (-p.h / 2) * squash, p.w, p.h * squash + 0.6);
+          ctx.restore();
+        }
+      }
+      ctx.globalAlpha = 1;
+      parts = parts.filter((p) => p.life > 0 && p.y < H + 80);
+      if (parts.length) raf = requestAnimationFrame(draw);
+      else { raf = null; ctx.clearRect(0, 0, W, H); }
+    };
+
+    const start = () => { if (!raf) raf = requestAnimationFrame(draw); };
+
+    return {
+      firework(x, y) { spark(x, y, true); start(); },
+      burst(x, y, n, s) { confettiBurst(x, y, n, s); start(); },
+      /* Пышный салют: двойной залп с left:0.2 и right:0.8 + угловые пушки
+         + фейерверки-звёзды + серебряно-золотое конфетти-дождь. */
+      celebrate(opt) {
+        const o = opt || {};
+        const kind = o.wide ? "wide" : "corner";
+        volley(kind);                                        // первый залп  ~124 части
+        setTimeout(() => volley(o.wide ? "wide" : "corner"), 520);  // второй залп
+        [[W * 0.2, H * 0.24], [W * 0.5, H * 0.16], [W * 0.8, H * 0.28]]
+          .forEach(([x, y], i) => setTimeout(() => spark(x, y, true), 180 + i * 260));
+        setTimeout(() => confettiBurst(W * 0.5, H * 0.5, o.wide ? 150 : 120, 1.1), 240);
+        setTimeout(() => {
+          setTimeout(() => spark(W * 0.34, H * 0.3, true), 120);
+          setTimeout(() => spark(W * 0.66, H * 0.22, true), 300);
+        }, 760);
+        setTimeout(() => rain(o.wide ? 96 : 72), 1080);
+        start();
+      },
+      stop() { parts = []; if (raf) cancelAnimationFrame(raf); raf = null; ctx.clearRect(0, 0, W, H); }
+    };
+  })();
+
+  /* ═══════════ OST: HAPPY BIRTHDAY (PIANO / MUSIC BOX) ═══════════ */
+  const Music = (() => {
+    let ctx = null, master = null, wet = null;
+    let padOsc = [], timer = null, fadeBack = null;
+    let idx = 0, nextTime = 0, playing = false;
+
+    // Точные частоты (A4 = 440 Гц), до-мажор
+    const NOTES = {
+      C3: 130.81, D3: 146.83, E3: 164.81, F3: 174.61, G3: 196.0, A3: 220.0, B3: 246.94,
+      C4: 261.63, D4: 293.66, E4: 329.63, F4: 349.23, G4: 392.0, A4: 440.0, B4: 493.88,
+      C5: 523.25, D5: 587.33, E5: 659.25, F5: 698.46, G5: 783.99
+    };
+
+    // Happy Birthday, размер 3/4. Длительности — в долях.
+    const MELODY = [
+      ["G4", 0.75], ["G4", 0.25], ["A4", 1], ["G4", 1], ["C5", 1.5], ["B4", 1.5],
+      ["G4", 0.75], ["G4", 0.25], ["A4", 1], ["G4", 1], ["D5", 1.5], ["C5", 1.5],
+      ["G4", 0.75], ["G4", 0.25], ["G5", 1], ["E5", 1], ["C5", 1.5], ["B4", 0.75], ["A4", 0.75],
+      ["F4", 0.75], ["F4", 0.25], ["E4", 1], ["C4", 1], ["D4", 1], ["C4", 2]
+    ];
+
+    const CHORDS = [
+      ["C3", "E3", "G3", "C4"],
+      ["C3", "E3", "G3", "C4"],
+      ["G3", "B3", "D4", "G4"],
+      ["C3", "E3", "G3", "C4"],
+      ["F3", "A3", "C4", "F4"],
+      ["F3", "A3", "C4", "F4"],
+      ["C3", "E3", "G3", "C4"]
+    ];
+
+    const BPM = 82;                 // медленный, чувственный темп
+    const BEAT = 60 / BPM;
+    const CYCLE = MELODY.reduce((s, m) => s + m[1], 0);
+    const CHORD_STARTS = [0, 6, 9, 12, 15, 18, 21];
+    let currentChord = -1;
+
+    const makeReverb = () => {
+      const len = Math.floor(ctx.sampleRate * 2.4);
+      const buf = ctx.createBuffer(2, len, ctx.sampleRate);
+      for (let c = 0; c < 2; c++) {
+        const d = buf.getChannelData(c);
+        for (let i = 0; i < len; i++) {
+          d[i] = (Math.random() * 2 - 1) * Math.pow(1 - i / len, 2.7);
+        }
+      }
+      const conv = ctx.createConvolver();
+      conv.buffer = buf;
+      const g = ctx.createGain();
+      g.gain.value = 0.34;
+      conv.connect(g).connect(master);
+      return conv;
+    };
+
+    // Тон акустического пианино / музыкальной шкатулки:
+    // синус-основа + мягкие гармоники, лёгкий расстроенный «тремор» и
+    // экспоненциальное затухание, как у реальной струны после удара молоточка.
+    const PARTIALS = [
+      { mul: 1, type: "sine", gain: 1.0, detune: 0 },
+      { mul: 2, type: "sine", gain: 0.20, detune: 2.5 },
+      { mul: 3, type: "sine", gain: 0.07, detune: -3 },
+      { mul: 4, type: "sine", gain: 0.035, detune: 4 },
+      { mul: 1, type: "triangle", gain: 0.085, detune: 5 }
+    ];
+
+    const voice = (freq, time, dur, gainVal) => {
+      if (!(freq > 0)) return;
+      const out = ctx.createGain();
+      const tone = ctx.createBiquadFilter();
+      const air = ctx.createBiquadFilter();
+
+      // мягкий тёмный регистр: как у пианино после удара
+      tone.type = "lowpass";
+      tone.frequency.setValueAtTime(Math.min(7200, freq * 12), time);
+      tone.frequency.exponentialRampToValueAtTime(Math.max(420, freq * 2.4), time + dur * 2);
+      tone.Q.value = 0.5;
+
+      // лёгкий «воздух» шкатулки
+      air.type = "highpass";
+      air.frequency.value = 120;
+
+      const oscs = PARTIALS.map((p) => {
+        const osc = ctx.createOscillator();
+        const pg = ctx.createGain();
+        osc.type = p.type;
+        osc.frequency.value = freq * p.mul;
+        osc.detune.value = p.detune + rnd(-1.6, 1.6);
+        pg.gain.value = p.gain;
+        osc.connect(pg).connect(out);
+        return osc;
+      });
+
+      // Небольшой тремор струны — придаёт «живость»
+      const trem = ctx.createOscillator();
+      const tremGain = ctx.createGain();
+      trem.frequency.value = 4.6 + Math.random() * 1.2;
+      tremGain.gain.value = freq * 0.0016;
+      trem.connect(tremGain);
+      oscs.forEach((o) => tremGain.connect(o.detune));
+
+      const attack = 0.012;
+      const decay = Math.min(Math.max(dur * 1.8, 0.85), 2.4);
+      out.gain.setValueAtTime(0.0001, time);
+      out.gain.exponentialRampToValueAtTime(gainVal, time + attack);
+      out.gain.exponentialRampToValueAtTime(gainVal * 0.22, time + attack + decay * 0.3);
+      out.gain.exponentialRampToValueAtTime(0.0001, time + attack + decay);
+
+      out.connect(tone).connect(air).connect(master);
+      if (wet) out.connect(wet);
+
+      const stopAt = time + attack + decay + 0.15;
+      oscs.forEach((o) => { o.start(time); o.stop(stopAt); });
+      trem.start(time);
+      trem.stop(stopAt);
+    };
+
+    const sparkle = (time) => {
+      const osc = ctx.createOscillator();
+      const g = ctx.createGain();
+      const f = 2000 + Math.random() * 1800;
+      osc.type = "sine";
+      osc.frequency.setValueAtTime(f, time);
+      osc.frequency.exponentialRampToValueAtTime(f * 1.85, time + 0.18);
+      g.gain.setValueAtTime(0.0001, time);
+      g.gain.exponentialRampToValueAtTime(0.03, time + 0.02);
+      g.gain.exponentialRampToValueAtTime(0.0001, time + 0.32);
+      osc.connect(g).connect(master);
+      if (wet) g.connect(wet);
+      osc.start(time);
+      osc.stop(time + 0.38);
+    };
+
+    const padChord = (chord, time, dur) => {
+      padOsc.forEach((n) => {
+        try {
+          n.gain.gain.cancelScheduledValues(time);
+          n.gain.gain.setValueAtTime(Math.max(n.gain.gain.value, 0.0001), time);
+          n.gain.gain.exponentialRampToValueAtTime(0.0001, time + 0.3);
+          n.osc.stop(time + 0.36);
+        } catch (e) {}
+      });
+      padOsc = chord.map((note, i) => {
+        const osc = ctx.createOscillator();
+        const g = ctx.createGain();
+        const f = ctx.createBiquadFilter();
+        f.type = "lowpass";
+        f.frequency.value = 1100;
+        f.Q.value = 0.3;
+        osc.type = "triangle";
+        osc.frequency.value = NOTES[note] || 196;
+        osc.detune.value = (i - 1.5) * 6;
+        const peak = 0.038;
+        const fade = Math.min(0.6, dur * 0.45);
+        g.gain.setValueAtTime(0.0001, time);
+        g.gain.exponentialRampToValueAtTime(peak, time + fade);
+        g.gain.setValueAtTime(peak, time + Math.max(fade, dur - fade));
+        g.gain.exponentialRampToValueAtTime(0.0001, time + dur);
+        osc.connect(f).connect(g).connect(master);
+        if (wet) g.connect(wet);
+        osc.start(time);
+        osc.stop(time + dur + 0.1);
+        return { osc, gain: g };
+      });
+    };
+
+    const chordAt = (b) => {
+      let c = CHORD_STARTS.length - 1;
+      for (let i = 0; i < CHORD_STARTS.length; i++) if (b >= CHORD_STARTS[i]) c = i;
+      return c % CHORDS.length;
+    };
+    const chordBeats = (c) => {
+      const start = CHORD_STARTS[c];
+      const end = c + 1 < CHORD_STARTS.length ? CHORD_STARTS[c + 1] : CYCLE;
+      return end - start;
+    };
+
+    let beatCursor = 0;
+    const scheduleStep = (step, time) => {
+      const [note, beats] = MELODY[step];
+      const dur = beats * BEAT;
+      const onTime = Math.min(dur * 0.9, 0.95);
+
+      voice(NOTES[note], time, onTime, 0.19);
+      voice(NOTES[note] / 2, time, onTime * 0.75, 0.055);
+      if (Math.random() > 0.86) sparkle(time + Math.random() * dur * 0.5);
+
+      const c = chordAt(beatCursor);
+      if (c !== currentChord) {
+        currentChord = c;
+        padChord(CHORDS[c], time, Math.max(chordBeats(c) * BEAT, 0.9));
+      }
+      beatCursor = (beatCursor + beats) % CYCLE;
+    };
+
+    const scheduler = () => {
+      const now = ctx.currentTime;
+      if (nextTime < now - 0.4) nextTime = now + 0.12;
+      const ahead = now + 0.5;
+      while (nextTime < ahead) {
+        scheduleStep(idx, nextTime);
+        nextTime += MELODY[idx][1] * BEAT;
+        idx = (idx + 1) % MELODY.length;
+      }
+    };
+
+    const ensureCtx = () => {
+      if (ctx) return;
+      const AC = window.AudioContext || window.webkitAudioContext;
+      if (!AC) return;
+      ctx = new AC();
+      master = ctx.createGain();
+      master.gain.value = 0.78;
+      master.connect(ctx.destination);
+      wet = makeReverb();
+    };
+
+    const resume = async () => {
+      if (!ctx || ctx.state !== "suspended") return;
+      try {
+        await Promise.race([ctx.resume(), new Promise((r) => setTimeout(r, 350))]);
+      } catch (e) {}
+    };
+
+    document.addEventListener("visibilitychange", () => {
+      if (!playing) return;
+      if (document.hidden) return;
+      resume();
+      nextTime = Math.max(nextTime, ctx.currentTime + 0.1);
+    });
+
+    const killPad = () => {
+      padOsc.forEach((n) => { try { n.osc.stop(); } catch (e) {} });
+      padOsc = [];
+    };
+
+    return {
+      get playing() { return playing; },
+      async toggle() {
+        ensureCtx();
+        if (!ctx) return false;
+        if (playing) {
+          playing = false;
+          clearInterval(timer); timer = null;
+          killPad();
+          master.gain.cancelScheduledValues(ctx.currentTime);
+          master.gain.setTargetAtTime(0.0001, ctx.currentTime, 0.1);
+          fadeBack = setTimeout(() => {
+            if (!playing && ctx) {
+              master.gain.cancelScheduledValues(ctx.currentTime);
+              master.gain.setValueAtTime(0.78, ctx.currentTime);
+            }
+          }, 420);
+          return false;
+        }
+        await resume();
+        playing = true;
+        clearTimeout(fadeBack);
+        master.gain.cancelScheduledValues(ctx.currentTime);
+        master.gain.setValueAtTime(0.78, ctx.currentTime);
+        idx = 0; beatCursor = 0; currentChord = -1;
+        nextTime = ctx.currentTime + 0.18;
+        timer = setInterval(scheduler, 70);
+        return true;
+      }
+    };
+  })();
+
+  /* ═══════════ МАРКИЗ ═══════════ */
+  const WISHES = [
+    "Пусть исполнятся все задуманные желания ✨",
+    "Пусть каждый новый день будет ярким 🌟",
+    "Пусть в году будет много путешествий 🎈",
+    "Пусть будет много поводов радоваться 🎉",
+    "Пусть рядом всегда будут близкие люди 🤍",
+    "Пусть сбудется самый красивый хэппи-энд 💫"
+  ];
+  const EPISODE = "EPISODE 01: SPECIAL DAY OF ANYA 🎬✨";
+  const buildMarquee = (el) => {
+    const items = [EPISODE, ...WISHES, ...WISHES];
+    el.innerHTML = items.map((t) => `<span>${t}</span>`).join("") +
+      items.map((t) => `<span>${t}</span>`).join("");
+  };
+  buildMarquee($("#marquee1"));
+  buildMarquee($("#marquee2"));
+
+  /* ═══════════ REVEAL ═══════════ */
+  const io = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((e) => {
+        if (e.isIntersecting) {
+          const delay = Number(e.target.dataset.delay || 0);
+          e.target.style.transitionDelay = delay + "ms";
+          e.target.classList.add("in");
+          io.unobserve(e.target);
+        }
+      });
+    },
+    { threshold: 0.12, rootMargin: "0px 0px -8% 0px" }
+  );
+  $$(".reveal").forEach((el, i) => {
+    el.dataset.delay = (i % 4) * 70;
+    io.observe(el);
+  });
+
+  /* ═══════════ ПЛЕЕР ═══════════ */
+  const musicBtn = $("#musicBtn");
+  const musicLabel = $("#musicLabel");
+  musicBtn.addEventListener("click", async () => {
+    const on = await Music.toggle();
+    musicBtn.classList.toggle("is-on", on);
+    musicBtn.setAttribute("aria-pressed", String(on));
+    musicBtn.setAttribute("aria-label", on ? "Выключить песню" : "Включить песню");
+    musicLabel.textContent = on ? "Выключить песню 🎶" : "Включить песню 🎶";
+    if (on && !reduceMotion) Confetti.burst(window.innerWidth * 0.5, window.innerHeight * 0.3, 130, 1.05);
+  });
+
+  /* ═══════════ ТОРТ ═══════════ */
+  const cakeEl = $("#birthdayCake");
+  const blowBtn = $("#blowBtn");
+  const wishNote = $("#wishNote");
+  const flames = $$(".candle");
+  let blown = false;
+
+  const blowOut = () => {
+    const rect = $(".cake-stage").getBoundingClientRect();
+    const cx = rect.left + rect.width / 2;
+    const cy = rect.top + rect.height * 0.42;
+
+    if (!blown) {
+      blown = true;
+      flames.forEach((c) => c.classList.add("out"));
+      cakeEl.classList.remove("lit");
+      wishNote.classList.add("show");
+      setTimeout(() => Confetti.firework(cx, cy - 90), 180);
+      setTimeout(() => Confetti.celebrate({ wide: true }), 520);
+      blowBtn.textContent = "Зажечь снова ✨";
+    } else {
+      blown = false;
+      flames.forEach((c) => c.classList.remove("out"));
+      cakeEl.classList.add("lit");
+      wishNote.classList.remove("show");
+      Confetti.burst(cx, cy - 60, 120, 1.05);
+      blowBtn.textContent = "Задуть свечи 🕯️";
+    }
+  };
+
+  blowBtn.addEventListener("click", blowOut);
+  cakeEl.addEventListener("click", blowOut);
+  cakeEl.addEventListener("keydown", (e) => {
+    if (e.key === "Enter" || e.key === " ") { e.preventDefault(); blowOut(); }
+  });
+  $("#fireBtn").addEventListener("click", () => Confetti.celebrate({ wide: true }));
+
+  /* ═══════════ МОДАЛЬНЫЕ ОКНА ═══════════ */
+  const modal = $("#wishModal");
+  const modalBox = $(".modal-box", modal);
+  const modalOverlay = $(".modal-overlay", modal);
+  const modalClose = $(".modal-close", modal);
+  const modalEmoji = $(".modal-emoji", modal);
+  const modalTag = $(".modal-tag", modal);
+  const modalTitle = $(".modal-title", modal);
+  const modalText = $(".modal-text", modal);
+  const modalBtn = $(".modal-btn", modal);
+  let lastFocused = null;
+
+  const closeModal = () => {
+    if (!modal.classList.contains("is-open")) return;
+    modalBox.classList.add("is-closing");
+    const done = () => {
+      modal.classList.remove("is-open");
+      modalBox.classList.remove("is-closing");
+      modal.hidden = true;
+      document.body.style.overflow = "";
+    };
+    if (reduceMotion) done();
+    else setTimeout(done, 220);
+    if (lastFocused) lastFocused.focus({ preventScroll: true });
+  };
+
+  const openModal = (card) => {
+    modalEmoji.textContent = card.dataset.emoji;
+    modalTitle.textContent = card.dataset.title;
+    modalText.textContent = card.dataset.text;
+    modalTag.textContent = $(".card-sub", card).textContent;
+
+    lastFocused = card;
+    modal.hidden = false;
+    document.body.style.overflow = "hidden";
+    if (reduceMotion) modal.classList.add("is-open");
+    else requestAnimationFrame(() => requestAnimationFrame(() => modal.classList.add("is-open")));
+    modalClose.focus({ preventScroll: true });
+  };
+
+  $$(".card").forEach((card) => {
+    card.addEventListener("click", () => openModal(card));
+    card.addEventListener("keydown", (e) => {
+      if (e.key === "Enter" || e.key === " ") { e.preventDefault(); openModal(card); }
+    });
+  });
+
+  [modalOverlay, modalClose, modalBtn].forEach((el) => el.addEventListener("click", closeModal));
+
+  document.addEventListener("keydown", (e) => {
+    if (!modal.classList.contains("is-open")) return;
+    if (e.key === "Escape") { e.preventDefault(); closeModal(); }
+    else if (e.key === "Tab") {
+      e.preventDefault();
+      const ring = [modalClose, modalBtn].filter((el) => el.offsetParent !== null);
+      const i = ring.indexOf(document.activeElement);
+      const next = e.shiftKey
+        ? (i <= 0 ? ring.length - 1 : i - 1)
+        : (i === -1 || i === ring.length - 1 ? 0 : i + 1);
+      ring[next].focus({ preventScroll: true });
+    }
+  });
+
+  /* ═══════════ ПОДАРОК ═══════════ */
+  const gift = $("#giftBox");
+  const ticketDrop = $("#couponDrop");
+  const giftHint = $("#giftHint");
+  const ticketBtn = $("#couponBtn");
+  let giftOpen = false;
+
+  const openGift = () => {
+    if (giftOpen) {
+      ticketDrop.classList.remove("show");
+      gift.classList.remove("open");
+      giftOpen = false;
+      giftHint.textContent = "Нажми на коробку, чтобы открыть";
+      return;
+    }
+    giftOpen = true;
+    gift.classList.add("open");
+    giftHint.textContent = "Нажми ещё раз, чтобы закрыть подарок";
+    setTimeout(() => {
+      ticketDrop.classList.add("show");
+      Confetti.celebrate({ wide: true });
+    }, reduceMotion ? 0 : 420);
+  };
+
+  gift.addEventListener("click", openGift);
+  gift.addEventListener("keydown", (e) => {
+    if (e.key === "Enter" || e.key === " ") { e.preventDefault(); openGift(); }
+  });
+
+  ticketBtn.addEventListener("click", () => {
+    ticketBtn.classList.add("activated");
+    ticketBtn.textContent = "Купон активирован 🤍";
+    Confetti.celebrate({ wide: true });
+  });
+
+  /* ═══════════ АВТОЗАПУСК САЛЮТА ═══════════ */
+  let autoTimer = 0;
+  const autoSalute = () => {
+    /* Пышный автосалют: двойной залп с left:0.2 и right:0.8 + звёзды-фейерверки */
+    Confetti.celebrate({ wide: true });
+
+    let n = 0;
+    autoTimer = setInterval(() => {
+      if (++n > 6) { clearInterval(autoTimer); autoTimer = 0; return; }
+      Confetti.firework(
+        window.innerWidth * (0.18 + Math.random() * 0.64),
+        window.innerHeight * (0.2 + Math.random() * 0.3)
+      );
+    }, 600);
+  };
+
+  window.addEventListener("load", () => {
+    if (reduceMotion) {
+      Confetti.burst(window.innerWidth / 2, window.innerHeight * 0.45, 60, 1);
+      return;
+    }
+    setTimeout(autoSalute, 400);
+  });
+
+  document.addEventListener("visibilitychange", () => {
+    if (autoTimer) { clearInterval(autoTimer); autoTimer = 0; }
+  });
+})();
+</script>
+</body>
+</html>
